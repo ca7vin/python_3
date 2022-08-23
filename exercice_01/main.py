@@ -2,20 +2,17 @@
 Formation Python sur Udemy"""
 
 
-# On demande le nom puis l'age de la personne
-
-# String
 nom_character = input("Quel est ton prénom ?")
-
-# Integer
-age_character = input("Quel est votre age ?")
-
+age_nextyear = 0
+# boucle While
+while age_nextyear == 0:
+    age_character_str = input("Quel est votre age ?")
+    try:
+        age_nextyear = int(age_character_str)  # Conversion String -> Integer
+    except ValueError:
+        print("Il faut rentrer un nombre pour l'age !")
 # Gestion des erreurs/exceptions, ici erreur de valeur
-try:
-    age_nextyear = int(age_character) + 1  # Conversion String -> Integer
-except ValueError:
-    print("Il faut rentrer un nombre pour l'age !")
 else:
     print("Je m'appelle " + nom_character)
-    print("Je suis agé de " + age_character + " ans")
-    print("L'an prochain, j'aurai " + str(age_nextyear) + " ans")
+    print("Je suis agé de " + age_character_str + " ans")
+    print("L'an prochain, j'aurai " + str(age_nextyear + 1) + " ans")
