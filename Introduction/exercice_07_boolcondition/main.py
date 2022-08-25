@@ -21,13 +21,21 @@ def print_infos(nom_personne, age_personne):
     print("Vous vous appeler " + nom_personne + " et vous avez " + str(age_personne) + " ans")
     print("L'an prochain vous aurez " + str(age_personne+1))
 
-    if age_personne > 18:
-        print("Vous êtes majeur !")
+    if age_personne > 60:
+        print("Vous êtes senior !")
     elif age_personne == 17:
         print("Vous êtes bientôt majeur! ")
+    elif 12 <= age_personne < 18 :
+        print("Vous êtes adolescent !")
     elif age_personne == 18:
         print("Vous êtes tout juste majeur !")
-    elif age_personne <= 18 :
+    elif age_personne == 1 or age_personne == 2:
+        print("Vous êtes bébé !")
+    elif age_personne < 10:
+        print("Vous êtes enfant !")
+    elif age_personne > 18 :
+        print("Vous êtes majeur !")
+    else:
         print("Vous êtes mineur !")
 
 
